@@ -1,0 +1,177 @@
+@import "./colors";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	color: white;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+nav {
+	//display: none; // DELETE THIS PLEASE
+	user-select: none;
+	$size: 4vh;
+	background-color: #000000d5;
+	//background-color: transparent;
+	width: 100%;
+	position: fixed;
+	top: -14vh;
+	left: 0;
+	height: 14vh;
+	z-index: 199;
+	.title {
+		position: fixed;
+		font-size: $size + 0.4;
+		top: -$size * 4;
+		left: 12.5%;
+		z-index: 200;
+		font-family: "Anton";
+		padding: 0;
+		margin: 0;
+		font-weight: bold;
+		transition: transform 0.4s;
+		cursor: pointer;
+		&:hover {
+			transform: rotate(-4deg) scale(1.2);
+			transition: transform 0.4s;
+		}
+	}
+	.menu {
+		position: fixed;
+		top: -$size * 4;
+		padding-top: 4px;
+		left: calc(87.5% - 4vh);
+		z-index: 200;
+		font-size: $size/2 + 0.4;
+		width: $size;
+		height: $size;
+		transition: transform 0.4s;
+		cursor: pointer;
+		&:hover {
+			transform: scale(1.2);
+			transition: transform 0.4s;
+		}
+	}
+}
+
+.s1 {
+	user-select: none;
+	.landing {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		height: 0;
+		z-index: 101;
+		background-image: url("../img/002.png");
+		background-size: cover;
+		background-position: center;
+		filter: brightness(0.9);
+	}
+	.behind {
+		background-color: $green;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		z-index: 100;
+	}
+	.header {
+		position: absolute;
+		font-family: "Righteous";
+		font-size: 6vw;
+		left: -8%;
+		opacity: 0;
+		top: 60%;
+		z-index: 102;
+		@media only screen and (max-width: 1050px) {
+			font-size: 12vw;
+		}
+	}
+}
+
+.s2 {
+	$bo-radius: 8px;
+	background-color: $orange;
+	.item-box {
+		user-select: none;
+		text-align: center;
+		.item {
+			background-color: black;
+			position: relative;
+			display: inline-block;
+			width: 256px;
+			height: 256px;
+			margin: 32px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			box-shadow: 0 0 $bo-radius rgba(#000000, 0.6);
+			border-radius: $bo-radius;
+			@media only screen and (max-width: 1050px) {
+				width: 224px;
+				height: 224px;
+				margin: 16px;
+			}
+			@media only screen and (min-width: 1200px) {
+				width: 14.5vw;
+				height: 14.5vw;
+				margin: 48px;
+				font-size: 1vw;
+			}
+			.item-title {
+				position: absolute;
+				box-shadow: 0 0 $bo-radius rgba(#000000, 0.6);
+				border-radius: $bo-radius;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(#000000, 0.6);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-family: "Righteous";
+				font-size: 2em;
+				transition: all 0.4s;
+				user-select: none;
+				text-shadow: 0 0 8px black;
+			}
+
+			transition: all 0.4s;
+			cursor: pointer;
+
+			&:hover {
+				transition: all 0.4s;
+				transform: scale(1.13) rotate(-8deg);
+				.item-title {
+					background-color: rgba(#000000, 0.2);
+					transition: all 0.4s;
+				}
+			}
+		}
+	}
+}
+
+section {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1em;
+}
+
+.section-inner {
+	width: 80%;
+	min-height: 80vh;
+	padding: 2vh 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

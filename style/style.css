@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #000000d5;
+  width: 100%;
+  position: fixed;
+  top: -14vh;
+  left: 0;
+  height: 14vh;
+  z-index: 199;
+}
+
+nav .title {
+  position: fixed;
+  font-size: 4.4vh;
+  top: -16vh;
+  left: 12.5%;
+  z-index: 200;
+  font-family: "Anton";
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  cursor: pointer;
+}
+
+nav .title:hover {
+  -webkit-transform: rotate(-4deg) scale(1.2);
+          transform: rotate(-4deg) scale(1.2);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+nav .menu {
+  position: fixed;
+  top: -16vh;
+  padding-top: 4px;
+  left: calc(87.5% - 4vh);
+  z-index: 200;
+  font-size: 2.4vh;
+  width: 4vh;
+  height: 4vh;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  cursor: pointer;
+}
+
+nav .menu:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.s1 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.s1 .landing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 0;
+  z-index: 101;
+  background-image: url("../img/002.png");
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.s1 .behind {
+  background-color: #41b3a3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 100;
+}
+
+.s1 .header {
+  position: absolute;
+  font-family: "Righteous";
+  font-size: 6vw;
+  left: -8%;
+  opacity: 0;
+  top: 60%;
+  z-index: 102;
+}
+
+@media only screen and (max-width: 1050px) {
+  .s1 .header {
+    font-size: 12vw;
+  }
+}
+
+.s2 {
+  background-color: #e8a87c;
+}
+
+.s2 .item-box {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+}
+
+.s2 .item-box .item {
+  background-color: black;
+  position: relative;
+  display: inline-block;
+  width: 256px;
+  height: 256px;
+  margin: 32px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1050px) {
+  .s2 .item-box .item {
+    width: 224px;
+    height: 224px;
+    margin: 16px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .s2 .item-box .item {
+    width: 14.5vw;
+    height: 14.5vw;
+    margin: 48px;
+    font-size: 1vw;
+  }
+}
+
+.s2 .item-box .item .item-title {
+  position: absolute;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Righteous";
+  font-size: 2em;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-shadow: 0 0 8px black;
+}
+
+.s2 .item-box .item:hover {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: scale(1.13) rotate(-8deg);
+          transform: scale(1.13) rotate(-8deg);
+}
+
+.s2 .item-box .item:hover .item-title {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1em;
+}
+
+.section-inner {
+  width: 80%;
+  min-height: 80vh;
+  padding: 2vh 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=style.css.map */

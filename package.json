@@ -1,0 +1,19 @@
+{
+	"name": "niceSite",
+	"version": "1.0.0",
+	"description": "the nice site",
+	"author": "Macylion",
+	"main": "index.js",
+	"scripts": {},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.12.1",
+		"font-awesome-icons": "^1.6.0",
+		"gsap": "^3.2.4"
+	},
+	"devDependencies": {
+		"cssnano": "^4.1.10"
+	}
+}
